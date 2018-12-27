@@ -1,0 +1,14 @@
+{
+  "name": "mongo_split",
+  "version": "1.0.0",
+  "description": "Split MongoDB collections based on field values. For use with MongoDB package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mongo"
+  ],
+  "author": "Chris Clifford",
+  "license": "ISC"
+}
