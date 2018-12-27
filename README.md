@@ -1,0 +1,1 @@
+Split MongoDB collections based on field values. For use with MongoDB package.
