@@ -10,5 +10,8 @@
     "Mongo"
   ],
   "author": "Chris Clifford",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.1.10"
+  }
 }
