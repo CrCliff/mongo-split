@@ -1,6 +1,6 @@
 {
   "name": "@crcliff/mongo-split",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Split MongoDB collections based on field values. For use with MongoDB package.",
   "main": "index.js",
   "scripts": {
