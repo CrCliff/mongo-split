@@ -9,30 +9,30 @@ const assert = require('assert');
 
 exports.splitCollection = function(url, dbName, collectionName, key) { 
 
-	MongoClient.connect(url, (connectErr, client) => {
-		assert.equal(connectErr, null);
+  MongoClient.connect(url, (connectErr, client) => {
+    assert.equal(connectErr, null);
 
-		var db = client.db(dbName);
-		var collection = db.collection(collectionName);
+    var db = client.db(dbName);
+    var collection = db.collection(collectionName);
 
-		collection.countDocuments( (countErr, count) => {
-			assert.equal(countErr, null);
-			assert.notEqual(count, 0, 'Collection is empty.');
-		});
+    collection.countDocuments( (countErr, count) => {
+      assert.equal(countErr, null);
+      assert.notEqual(count, 0, 'Collection is empty.');
+    });
 
-		var cursor = collection.find();
-		cursor.forEach( (doc) => {
-			assert.notEqual(doc, null);
+    var cursor = collection.find();
+    cursor.forEach( (doc) => {
+      assert.notEqual(doc, null);
 
-			var subCollection = db.collection(String(doc[key]));
+      var subCollection = db.collection(String(doc[key]));
 
-			subCollection.insertOne(doc, (insertErr, res) => {
-				if (insertErr) {
-					console.log("Inserting duplicate order attempted...");
-				}
-			})
+      subCollection.insertOne(doc, (insertErr, res) => {
+        if (insertErr) {
+          console.log("Inserting duplicate order attempted...");
+        }
+      })
 
-		});
+    });
 
-	});
+  });
 }
