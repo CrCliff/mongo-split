@@ -16,3 +16,5 @@ var split = require('mongo-split');
 // Fourth parameter is key to split collection upon
 split.splitCollection('mongodb://localhost:27017', 'regions', '10000002', 'is_buy_order')
 ```
+
+See [the NPM page for mongo-split](https://www.npmjs.com/package/mongo-split?activeTab=readme)
